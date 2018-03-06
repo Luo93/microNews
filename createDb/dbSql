@@ -1,0 +1,9 @@
+//sql ´´½¨±íÓï¾ä
+create table press
+(
+   Id int primary key identity,
+   Title nvarchar(100),
+   Content nvarchar(max),
+   Origin nvarchar(100),
+   CreateDate datetime,
+)

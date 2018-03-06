@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% include header.ejs %>
+    <div class="main">
+      <h2 class="text-center"><%= title %></h2>
+      <p class="gray text-right"><%= date %></p>
+      <div class="mt50"><%- content %></div>
+      <% if(org){ %>
+      <p class="mt20"><a href="<%= org %>" target="_blank">阅读来源</a></p>
+      <% } %>
+    </div>
+    <% include footer.ejs %>
+  </body>
+</html>

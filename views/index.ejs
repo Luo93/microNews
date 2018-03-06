@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% include header.ejs %>
+    <p class="w80 mt20 mb30"><a href="/" class="mr10">首页</a> &gt;<span class="ml10"><%= title %></span> </p>
+    <div class="main">
+      <% content.forEach(function(con,index){ %>
+      <div class="mb30 clear">
+        <p class="left">
+            <a href="detail/<%= (con.Id) %>" target="_blank"><%= con.Title %></a>
+        </p>
+        <p class="text-right gray right"><%= (con.Date) %></p>
+      </div>
+      <%}) %>
+    </div>
+    <% include footer.ejs %>
+  </body>
+</html>
